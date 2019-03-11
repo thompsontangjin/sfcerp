@@ -1,0 +1,70 @@
+<script src="static/top.js"></script>  
+
+
+
+
+
+
+<center>
+<table border=2px>
+<tr>
+<td>材料名称</td>
+<td>材料批号</td>
+<td>规格</td>
+<td>包装</td>
+<td>数量</td>
+<td>有效期</td>
+<td>重量</td>
+<td>仓库</td>
+<td>提货日期</td>
+</tr>
+
+{% for item in ldf %}
+
+<tr>
+<td>{{df.ix[item]["mana"]}}
+</td>
+<td>{{df.ix[item]["banu"]}}
+</td>
+<td>{{df.ix[item]["past"]}}
+</td>
+<td>{{df.ix[item]["pana"]}}
+</td>
+<td>{{df.ix[item]["quan"]}}
+</td>
+<td>{{df.ix[item]["exda"][0:10]}}
+</td>
+<td>{{df.ix[item]["past"]* df.ix[item]["quan"]}}
+</td>
+<td>{{df.ix[item]["wana"]}}
+</td>
+<td>{{df.ix[item]["ewda"]}}
+</td>
+</tr>
+{% end %}
+<tr>
+<td>总计重量:
+</td>
+<td>{{quantity}}
+</td>
+<td>公斤
+</td>
+<td>
+</td>
+<td>总计桶数：
+</td>
+<td>{{amount}}
+</td>
+<td>桶
+</td>
+<td>
+</td>
+</tr>
+
+
+
+
+</table>
+</center>
+    </body>
+</html>

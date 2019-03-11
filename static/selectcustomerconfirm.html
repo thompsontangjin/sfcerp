@@ -1,0 +1,45 @@
+<script src="static/top.js"></script>  
+
+
+
+ 
+
+
+        <center><div style="margin:100px 80px " >
+            
+
+
+        
+        <form action="/saoncustomer" method="post">
+            <p>出货货号:<input type="text" name="saon" value={{saon}}>&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp</p>      
+            <p>客户名称:<input type="text" name="cuna" value={{cuna}} >&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp</p>
+<p>仓库：<select name="wana"> 
+<option value="广州">广州 </option> 
+<option value="上海"> 上海 </option> 
+<option value="北京"> 北京 </option> 
+<option value="厦门"> 厦门 </option> 
+</select> 
+业务员：  
+<select name="sape"> 
+{% for sales in sl %}
+
+<option value={{sales["username"]}} >{{sales["username"]}} </option> 
+{% end %}
+
+</select>    
+助理：  
+<select name="mape"> 
+{% for asister in al %}
+
+<option value={{asister["username"]}}>{{asister["username"]}}</option> 
+
+{% end %}
+</select>  
+</p>          
+<input type="submit" value="确认">
+            
+                   
+        </form>
+            </div></center>
+    </body>
+</html>

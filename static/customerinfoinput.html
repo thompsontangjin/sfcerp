@@ -1,0 +1,61 @@
+<script src="static/top.js"></script>  
+
+
+
+
+
+
+
+
+
+
+        <center><div style="margin:100px 80px " >
+
+        
+        <form action="/customerinfoinput" method="post">
+  
+            <p>客户名称:<input type="text" name="cuna" ></p>  
+            <p>收货地址:<input type="text" name="repl"></p>   
+            <p>发票地址:<input type="text" name="inad"></p>   
+            <p>收货人:<input type="text" name="cosi"></p>   
+            <p>收货人电话:<input type="text" name="ctel"  ></p>     
+            <p>收货人手机:<input type="text" name="cmob"  ></p>       
+             <p>收货人传真:<input type="text" name="cfax"></p>
+             <p>收货人邮编:<input type="text" name="cpos"></p>
+             <p>客户税号:<input type="text" name="tanu"></p>
+             <p>备注信息:</p><p><textarea name="rema" cols ="50" rows = "5"></textarea></p>
+<p>
+运费价档：<select name="frar"> 
+{%  for area in areas  %}
+<option value={{area["frar"]}}>{{area["frar"]}}</option> 
+{% end %}
+</select> 
+行业类别：<select name="incl"> 
+<option value="互感">互感</option> 
+<option value="干变">干变</option> 
+</select> 
+大桶是否带托盘：<select name="pall"> 
+<option value="y">带托盘 </option> 
+<option value="n"> 不带托盘 </option> 
+</select> 
+是否危险品地区：<select name="sfdl"> 
+<option value="gdanger">危险品 </option> 
+<option value="gnormal"> 普货 </option> 
+</select> 
+运费自付代垫：<select name="frsc"> 
+<option value="D">代垫 </option> 
+<option value="Z"> 自付 </option> 
+</select> 
+保费自付代垫：<select name="prsc"> 
+<option value="D">代垫 </option> 
+<option value="Z"> 自付 </option> 
+</select> </p>
+<p>
+              
+<input type="submit" value="输入确认">
+            
+                   
+        </form>
+            </div></center>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<script src="static/top.js"></script>  
+
+
+
+
+
+
+
+
+        <center><div style="margin:100px 80px " >
+
+        
+        <form action="/putinwh" method="post">
+  
+            <p>采购单号:<input type="text" name="ponu" value={{puon}}>&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp</p>  
+            <p>材料名称:<input type="text" name="mana">&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp</p>   
+            <p>材料批号:<input type="text" name="banu">&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp</p>   
+            <p>有效期限:<input type="text" name="exda">&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp</p>   
+            <p>包装规格:<input type="text" name="past"  >公斤/桶</p>     
+            <p>包装皮重:<input type="text" name="pagw"  >公斤/桶</p>       
+             <p>材料数量:<input type="text" name="quan">桶&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp</p>
+
+<p>
+进货货号:
+<select name="pinu"> 
+{% for item in spinu %}
+<option value={{item}}> {{item}} </option> 
+{% end %}
+</select> 
+
+
+仓库：<select name="wana"> 
+{% for item in swana %}
+<option value={{item}}> {{item}} </option> 
+{% end %}
+</select> 
+              
+<input type="submit" value="入库确认">
+            
+                   
+        </form>
+            </div></center>
+    </body>
+</html>

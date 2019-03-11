@@ -1,0 +1,21 @@
+<script src="static/top.js"></script>  
+
+
+
+
+<center>修改待确认发货列表如下：</center>
+<center>
+ <form action="/modifytobedealwith" method="post">
+<select name="saon"> 
+{% for item in tl  %}
+<option value={{item}}>{{item}} </option> 
+{%end%}
+</select>  
+
+<input type="submit" value="确认">
+</form>
+</center>
+
+
+</body>
+</html>

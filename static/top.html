@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>协励行(厦门)绝缘科技有限公司</title>
+        <link rel="stylesheet" href="static/style.css">
+        <meta charset="utf-8" />
+    </head>
+<body>
+<p><center><h1>欢迎进入协励行(厦门)电气有限公司办公系统</h1></center></p>
+        <ul >
+            <li class="dropdown">
+                <a id="a" href="javascript:void(0)" class="dropbtn" onclick="showList(this)">查询</a>
+                <div class="dropdown-content" id="dropdown-a">
+                    <a href="/querystockexda">临近失效期库存查询</a>
+                    <a href="/querystock">库存查询</a>
+                    <a href="/currentstockdetail">库存重量明细汇总</a>
+		    <a href="/rqfrpr">运保查询</a>
+                    <a href="/rqdg">出货查询</a>
+                    <a href="/rqpi">进货查询</a>
+                    
+                </div>
+            </li>
+            <li class="dropdown">
+                <a id="b" href="javascript:void(0)" class="dropbtn" onclick="showList(this)">出货</a>
+                <div class="dropdown-content" id="dropdown-b">
+                    <a href="/selectcustomer">出货文件号</a>
+                    <a href="/salesd">出货材料</a>
+                    <a href="/showdelieverydocument">生成出货单</a>
+                    <a href="/confirmdelievery">出货确认</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a id="c" href="javascript:void(0)" class="dropbtn" onclick="showList(this)">计算</a>
+                <div class="dropdown-content" id="dropdown-c">
+                    <a href="/calculatefreight">运保费计算</a>
+                    <a href="/freightcalc">树脂运费计算器</a>
+			<a href="/changefp">树脂运保费更改</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a id="d" href="javascript:void(0)" class="dropbtn" onclick="showList(this)">入库</a>
+                <div class="dropdown-content" id="dropdown-d">
+                    <a href="/putinwh">单条输入</a>
+                    <a href="/putinwhbat">成批导入</a>
+                    <a href="/showinputdoc">生成进货单</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a id="e" href="javascript:void(0)" class="dropbtn" onclick="showList(this)">管理</a>
+                <div class="dropdown-content" id="dropdown-e">
+                     <a href="/addnewuser">增加用户</a>
+                     <a href="/viewuser">用户浏览</a>
+                     <a href="/changepwd">更改密码</a>
+                     <a href="/deleteuser">删除用户</a>
+                     <a href="/importdata">数据导入</a>
+                     <a href="/toexcel">数据导出</a>
+                     <a href="/createdatabase">数据库初始化</a>
+			<a href="/customerinfoinput">客户信息输入</a>
+                </div>
+            </li>
+        </ul>
+        <script src="static/script.js"></script>  
+

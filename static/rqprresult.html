@@ -1,0 +1,58 @@
+<script src="static/top.js"></script>  
+
+
+ 
+
+<center>
+<table border=2px>
+<tr>
+<td>日期</td>
+<td>出货文件号</td>
+<td>客户</td>
+<td>费率</td>
+<td>保费(元)</td>
+<td>自付代垫</td>
+</tr>
+{% for item in ldf %}
+
+<tr>
+<td>{{df.ix[item]["date"]}}
+</td>
+<td>{{df.ix[item]["saon"]}}
+</td>
+<td>{{df.ix[item]["cuna"]}}
+</td>
+<td>{{df.ix[item]["rate"]}}
+</td>
+<td>{{df.ix[item]["suas"]}}
+</td>
+<td>{{df.ix[item]["prsc"]}}
+</td>
+
+
+</tr>
+{% end %}
+<tr>
+<td>总计:
+</td>
+<td>{{amount}}
+</td>
+<td>元
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+
+
+</tr>
+
+
+
+
+</table>
+</center>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<script src="static/top.js"></script>  
+
+
+
+
+<center>待确认发货列表如下：</center>
+<center>
+ <form action="/confirmdelievery" method="post">
+<select name="saon"> 
+{% for item in tl  %}
+<option value={{item}}>{{item}} </option> 
+{%end%}
+</select>  
+<select name="acco"> 
+<option value="conf">确认发货 </option> 
+<option value="undo"> 撤消发货 </option> 
+
+</select> 
+<input type="submit" value="确认">
+</form>
+</center>
+
+
+</body>
+</html>

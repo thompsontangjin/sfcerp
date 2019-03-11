@@ -1,0 +1,36 @@
+<script src="static/top.js"></script>  
+
+
+
+ 
+
+
+        <center><div style="margin:100px 80px " >
+            
+
+        
+        <form action="/freightcalc" method="post">
+            <p>出货地区:<input type="text" name="frar">&nbsp&nbsp&nbsp &nbsp&nbsp</p>      
+           
+            <p>出货毛重:<input type="text" name="frwe" >吨</p>      
+   
+<p>是否危险品：<select name="sfdl"> 
+<option value="gdanger">危险品 </option> 
+<option value="gnormal"> 普货 </option> 
+<option value="gnormalgd"> 广州发广东 </option> 
+
+</select> 
+自付/代垫：  
+<select name="sfcu"> 
+<option value="D">代垫 </option> 
+<option value="Z">自付 </option> 
+
+</select>    </p>
+            
+<input type="submit" value="计算运费">
+            
+                   
+        </form>
+            </div></center>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<script src="static/top.js"></script>  
+
+
+
+
+<center>
+<table>
+<tr>
+<td width="70%">
+   <center><div style="margin:100px 80px " >
+
+        
+        <form action="/delievery" method="post">
+            <p>出货货号:<input type="text" name="saon" value={{saon}}>&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp</p>      
+            <p>材料批号:<select name="banu"> 
+
+{% for item in ldf %}
+
+
+<option value={{df.ix[item]["banu"]+","+str(df.ix[item]["past"])+","+df.ix[item]["mana"]}}>{{df.ix[item]["mana"]+"批号".decode('utf8')+df.ix[item]["banu"]+"有效期".decode('utf8')+df.ix[item]["exda"][0:10]+"数量".decode('utf8')+str(df.ix[item]["quan"])+"桶规格".decode('utf8')+str(df.ix[item]["past"])+"提货日期".decode('utf8')+str(df.ix[item]["ewda"])}} </option> 
+{% end %}
+
+
+		</select> </p>  
+             <p>材料数量:<input type="text" name="quan">桶&nbsp &nbsp&nbsp</p>
+
+		<p>售价:<input type="text" name="pric">元/公斤<select name="insf"> 
+<option value="i">含税</option> 
+<option value="n">不含税</option> 
+</select> </p>
+<p>仓库：<select name="wana"> 
+<option value={{wana}}>{{wana}} </option> 
+
+</select> 
+业务员：  
+<select name="sape"> 
+<option value={{sape}}>{{sape}} </option> 
+
+</select>    
+助理：  
+<select name="mape"> 
+<option value={{mape}} >{{mape}} </option> 
+
+</select>    </p>                 
+<input type="submit" value="生成出货明细">
+            
+                   
+        </form>
+            </div></center>
+
+</td>
+
+<td width="30%">
+    
+ <div><center>
+<table>
+<tr>
+<td>材料</td>
+<td>价格</td>
+<td>是否含税</td>
+</tr>
+{%  for item in cmpi %}
+<tr>
+<td>{{item}}</td>
+<td>{{cmpi[item][1]}}</td>
+<td>
+{% set insf="" %}
+{% if cmpi[item][0]=="i" %}
+{% set insf="是" %}
+{% else %}
+{% set insf="否" %}
+{% end %}
+{{ insf }}
+</td>
+</tr>
+
+{% end %}
+</table> 
+ 
+ </center></div>   
+</td>
+</tr></table>
+</center>
+
+        
+            
+    </body>
+</html>

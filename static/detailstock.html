@@ -1,0 +1,58 @@
+<script src="static/top.js"></script>  
+
+
+
+
+
+
+
+
+
+<center>
+
+<table border=2px>
+
+
+
+
+{% for csdd in csd %}
+
+<tr>
+<td>{{csdd[csdd.keys()[1]]}}
+</td>
+<td>{{csdd.keys()[0]}}
+</td>
+<td>{{csdd[csdd.keys()[0]]}}
+</td>
+<td>公斤
+<td>{{csdd.keys()[2]}}
+</td>
+<td>{{csdd[csdd.keys()[2]]}}
+</td>
+<td>公斤
+</td>
+<td>{{csdd.keys()[3]}}
+</td>
+<td>{{csdd[csdd.keys()[3]]}}
+</td>
+<td>公斤
+</td>
+<td>{{csdd.keys()[4]}}
+</td>
+<td>{{csdd[csdd.keys()[4]]}}
+</td>
+<td>公斤
+</td>
+<td>全库汇总:
+</td>
+<td>{{csdd[csdd.keys()[0]]+csdd[csdd.keys()[2]]+csdd[csdd.keys()[3]]+csdd[csdd.keys()[4]]}}
+</td>
+<td>公斤
+</td>
+</tr>
+{% end %}
+
+</table>
+</center>
+    </body>
+</html>

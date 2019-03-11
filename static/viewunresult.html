@@ -1,0 +1,35 @@
+<script src="static/top.js"></script>  
+
+
+
+
+<center>
+<table border=2px>
+<tr>
+<td>用户名
+</td>
+<td>密码
+</td>
+<td>部门
+</td>
+</tr>
+{% for item in ldf %}
+
+<tr>
+<td>{{df.ix[item]["username"]}}
+</td>
+<td>{{df.ix[item]["pwd"]}}
+</td>
+<td>{{df.ix[item]["level"]}}
+</td>
+</tr>
+{% end %}
+
+
+
+
+</table>
+</center>
+    </body>
+</html>
+

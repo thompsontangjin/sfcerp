@@ -1,0 +1,26 @@
+<script src="static/top.js"></script>  
+
+
+        <center><div style="margin:100px 80px " >
+
+        
+        <form action="/selectcustomer" method="post">
+            <p>出货货号:<input type="text" name="saon" value={{saon}}>&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp</p>      
+            <p>客户名称:<select name="cuna"> 
+    {% for item in cuna %}
+
+      <option value={{ escape(item) }}>{{ escape(item) }}</option> 
+
+    {% end %}
+
+</select> </p>
+
+          
+<input type="submit" value="查找">
+            
+                   
+        </form>
+            </div></center>
+
+    </body>
+</html>

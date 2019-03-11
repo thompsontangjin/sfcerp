@@ -1,0 +1,26 @@
+<script src="static/top.js"></script>  
+
+
+
+
+        <center><div style="margin:100px 80px " >
+      
+        
+        <form action="/selectcustomer" method="post">
+            <p>出货货号:<select name="saon"> 
+{% for so in saonl %}
+<option value={{so}}>{{so}} </option> 
+{% end %}
+
+</select>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </p>      
+            <p>客户名称:<input type="text" name="cuna" value={{cuna}} onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999">&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp</p>
+
+          
+<input type="submit" value="查找">
+            
+                   
+        </form>
+            </div></center>
+
+    </body>
+</html>

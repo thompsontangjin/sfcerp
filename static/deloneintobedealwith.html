@@ -1,0 +1,26 @@
+<script src="static/top.js"></script>  
+
+
+
+
+<center><h1>请选择要删除的一行：</h1></center>
+
+ <center> <form action="/modifytobedealwith2" method="post">
+<p>
+{%for item in ldf %}
+    <p> <input type=radio name="choice" value={{choice.ix[item]["banu"]}},{{choice.ix[item]["quan"]}},{{choice.ix[item]["sapr"]}},{{choice.ix[item]["wana"]}} > 材料：{{choice.ix[item]["mana"]}} 批号 ：{{choice.ix[item]["banu"]}}规格 ：{{choice.ix[item]["past"]}}数量：{{choice.ix[item]["quan"]}} 价格 ：{{choice.ix[item]["sapr"]}}   
+</p>
+{% end %} 
+
+
+
+           
+     <input type="hidden" name="saon" value={{saon}}>出货单号：{{saon}}
+     <input type="submit" value="删除">
+            
+    </p>                  
+        </form>
+
+</center>
+</body>
+</html>

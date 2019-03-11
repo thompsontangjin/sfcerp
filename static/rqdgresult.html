@@ -1,0 +1,137 @@
+<script src="static/top.js"></script>  
+
+
+
+
+
+
+
+
+<center>
+<table border=2px>
+<tr>
+<td>客户名称
+</td>
+<td>出货文件号
+</td>
+<td>出货日期
+</td>
+<td>材料名称
+</td>
+<td>材料批号
+</td>
+<td>材料有效期
+</td>
+<td>材料规格
+</td>
+<td>桶数(桶)
+</td>
+<td>重量(公斤)
+</td>
+<td>单价
+</td>
+<td>是否含税
+</td>
+<td>含税金额
+</td>
+
+<td>出货仓库
+</td>
+<td>业务员
+</td>
+</tr> 
+
+{% set total=0 %}
+
+{% for item in ldf %}
+
+<tr>
+<td>{{df.ix[item]["cuna"]}}
+</td>
+<td>{{df.ix[item]["saon"]}}
+</td>
+<td>{{df.ix[item]["owda"]}}
+</td>
+<td>{{df.ix[item]["mana"]}}
+</td>
+<td>{{df.ix[item]["banu"]}}
+</td>
+<td>{{df.ix[item]["exda"][0:10]}}
+</td>
+<td>{{df.ix[item]["past"]}}
+</td>
+<td>{{df.ix[item]["quan"]}}
+</td>
+<td>
+
+{{(df.ix[item]["quan"]*df.ix[item]["past"])}}
+
+
+</td>
+<td>{{df.ix[item]["sapr"]}}
+</td>
+<td>{{df.ix[item]["insf"]}}
+</td>
+<td>
+{% if df.ix[item]["insf"]=="n"    %}
+{{round(round(df.ix[item]["quan"]*df.ix[item]["past"]*float(df.ix[item]["sapr"]),2)  *1.16,2)}}
+
+{% set total=total + round(round(df.ix[item]["quan"]*df.ix[item]["past"]*float(df.ix[item]["sapr"]),2)  *1.16,2) %}
+
+{% else %}
+
+
+
+{{(df.ix[item]["quan"]*df.ix[item]["past"]*float(df.ix[item]["sapr"]))}}
+
+{% set total=total + (df.ix[item]["quan"]*df.ix[item]["past"]*float(df.ix[item]["sapr"])) %}
+
+{% end %}
+</td>
+<td>{{df.ix[item]["wana"]}}
+</td>
+<td>{{df.ix[item]["sape"]}}
+</td>
+</tr>
+{% end %}
+<tr>
+<td>总计重量:
+</td>
+<td>{{amount}}
+</td>
+<td>公斤
+</td>
+<td>
+</td>
+
+<td>总金额：
+</td>
+<td>{{total}}
+</td>
+<td>元
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+
+
+
+
+</table>
+</center>
+
+
+    </body>
+</html>
