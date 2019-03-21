@@ -11,7 +11,9 @@ import undoandtrans
 from database import database
 from authenticate import *
 from function import *
-
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 
 global ia
