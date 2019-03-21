@@ -64,7 +64,7 @@
 </td>
 <td>
 
-{{(df.ix[item]["quan"]*df.ix[item]["past"])}}
+{{round((df.ix[item]["quan"]*df.ix[item]["past"]),2)}}
 
 
 </td>
@@ -82,7 +82,7 @@
 
 
 
-{{(df.ix[item]["quan"]*df.ix[item]["past"]*float(df.ix[item]["sapr"]))}}
+{{round((df.ix[item]["quan"]*df.ix[item]["past"]*float(df.ix[item]["sapr"])),2)}}
 
 {% set total=total +round((df.ix[item]["quan"]*df.ix[item]["past"]*float(df.ix[item]["sapr"])),2) %}
 
