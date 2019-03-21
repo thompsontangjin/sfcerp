@@ -84,7 +84,7 @@
 
 {{(df.ix[item]["quan"]*df.ix[item]["past"]*float(df.ix[item]["sapr"]))}}
 
-{% set total=total + (df.ix[item]["quan"]*df.ix[item]["past"]*float(df.ix[item]["sapr"])) %}
+{% set total=total +round((df.ix[item]["quan"]*df.ix[item]["past"]*float(df.ix[item]["sapr"])),2) %}
 
 {% end %}
 </td>
